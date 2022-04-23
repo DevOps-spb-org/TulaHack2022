@@ -1,41 +1,84 @@
 .headerContainer {
-  height: 347px;
-  position: relative;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  /* position: relative; */
 }
 
-.logoContainer {
-  position: relative;
-  z-index: 2;
-  font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 98px;
-line-height: 98px;
-margin-top: 55px;
-letter-spacing: 2.8px;
-text-transform: uppercase;
-color: #000000;
-margin-bottom: 95px;
-text-align: center;
+.logoGroup{
+  display: flex;
 }
 
-.logo {
-  z-index: 1;
-  width: 147px;
-  height: 79px;
-  left: 110px;
-  top: 65px;
+.logo1{
+  width: 120px;
+}
+
+.logo2{
+  margin-left: 10px;
+  margin-top: 19px;
+}
+
+.logoText{
+  color: #555555;
+  font-weight: bold;
+  font-size: 43px;
+}
+
+.logoSub{
+  color: #555555;
+  font-size: 16px;
+  margin-top: -5px
+}
+
+.search{
+  border-radius: 8px;
+  margin-top: 30px;
+  width: 400px;
+  height: 60px;
+  background-color: #F0F0F0;
+}
+
+.search1{
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+
+.search2{
   position: absolute;
-  background: #99FF91;
-transform: rotate(-16.95deg);
-font-size: 45px;
-text-align: center;
+  margin-left: 10px;
+  margin-top: 17px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background-color: #F0F0F0;
+  outline:none;
 }
 
-.link {
-  color: black;
+.extra{
+  margin-top: 30px;
+  width: 160px;
 }
 
-.link:hover {
-  color: black;
+.enter{
+  margin-top: 30px;
+  height: 60px;
+  width: 220px;
+  background: linear-gradient(94.97deg, #04CE9B 0%, #64E408 100%);
+  border-radius: 8px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+}
+
+.btnText{
+  margin-left: 5px;
+  margin-right: 10px;
+  color: white;
+}
+
+.btnIcon{
+  margin-right: 5px;
 }

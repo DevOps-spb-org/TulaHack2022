@@ -32,28 +32,28 @@ import { CustomLink } from './CustomLink/CustomLink'
     },
     {
       path: '/tasks',
-      label: 'Лоты',
+      label: 'аукционы',
       isUser: false,
       role: false,
     },
     {
       path: '/workers',
-      label: 'Магазины',
+      label: 'о сервисе',
       isUser: false,
       role: false,
     },
-    {
-      path: '/signin',
-      label: 'Войти',
-      isUser: false,
-      role: false,
-    },
-    {
-      path: '/signup',
-      label: 'Зарегистрироваться',
-      isUser: false,
-      role: false,
-    },
+    // {
+    //   path: '/signin',
+    //   label: 'Войти',
+    //   isUser: false,
+    //   role: false,
+    // },
+    // {
+    //   path: '/signup',
+    //   label: 'Зарегистрироваться',
+    //   isUser: false,
+    //   role: false,
+    // },
   ]
 function NavBar() {
   const [links, setLinks] = useState(linksList)

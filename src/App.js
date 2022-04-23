@@ -9,7 +9,6 @@ import { checkUser, delUser } from "./redux/actions/userAction"
 import Header from "./components/Header/Header"
 import Greet from "./components/Greet/Greet"
 import Footer from "./components/Footer/Footer"
-import { Container } from "@mui/material"
 import style from "./App.module.css"
 import CreateTask from "./components/TaskPage/CrateTask/CreateTask"
 import { allTasks } from "./redux/actions/tasksAc"
@@ -22,7 +21,6 @@ import CurrentTask from "./components/TaskPage/TaskList/CurrentTask/CurrentTask"
 import Workers from "./components/Workers/Workers"
 import { allMsg } from "./redux/actions/msgAc"
 import CurrentWorker from "./components/Workers/CurrentWorker/CurrentWorker"
-import Test from "./components/Test/Test"
 
 function App() {
   const dispatch = useDispatch()
@@ -53,7 +51,6 @@ function App() {
 
   return (
     <div className={style.content}>
-      <Container>
         <Header />
         <Routes>
           <Route path="/" element={<Greet />} />
@@ -73,7 +70,6 @@ function App() {
           <Route path='workers/:id' element={<CurrentWorker />}></Route>
         </Routes>
         <Footer />
-      </Container>
     </div>
   )
 }
