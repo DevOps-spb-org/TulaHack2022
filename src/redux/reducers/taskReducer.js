@@ -18,10 +18,11 @@ export const taskReducer = (state = [], action) => {
 
     case TASK_UP: {
       return state = state.map((prev) => {
-        if (prev.id === payload.id) {
-          return payload
-        }
-        return prev
+        if (prev.id == payload) {
+          console.log('HERE', prev)
+          prev.status = +prev.status + 1;
+          return prev;
+        } else return prev;
       })
     }
     case DELETE_TASK: {

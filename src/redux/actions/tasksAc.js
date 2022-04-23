@@ -2,7 +2,7 @@ import axios from 'axios'
 import { ADD_TASK, ALL_TASKS, TASK_UP, FILTER_TASK, SEARCH_TASK } from '../types/tasksTypes'
 
 export const allTasks = () => (dispatch) => {
-  // fetch('http://localhost:3001/tasks')
+  // fetch('http://localhost:3001/')
   //   .then(res => res.json())
   //   .then(data => dispatch({
   //     type: ALL_TASKS,
@@ -14,7 +14,7 @@ export const allTasks = () => (dispatch) => {
         title: 'Lorem ipsum dolor sit amet',
         category: 'Антиквариат',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula ipsum id enim tincidunt, vel egestas arcu euismod. Vestibulum ipsum massa, fringilla nec placerat vitae, eleifend at lectus.',
-        deadline: '2022-02-14 02:00:00',
+        deadline: '2022-04-23 16:30:00',
         isDone: false,
         status: 1,
         owner: 4,
@@ -83,10 +83,10 @@ export const upTask = (response) => ({
   payload: response,
 })
 
-export const upTaskThunk = (task_id, user_id) => async (dispatch) => {
-  const userFromBack = await axios.patch('http://localhost:3001/tasks', { task_id, user_id })
-  const response = userFromBack.data
-  dispatch(upTask(response))
+export const upTaskThunk = (task_id) => async (dispatch) => {
+  // const userFromBack = await axios.patch('http://localhost:3001/tasks', { task_id, user_id })
+  // const response = ''
+  dispatch(upTask(task_id))
 }
 
 export const filteredTask = (data) => (dispatch) => {

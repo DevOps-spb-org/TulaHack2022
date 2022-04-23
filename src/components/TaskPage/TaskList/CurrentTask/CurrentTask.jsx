@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import style from './style.module.css'
+import Count from "./Count";
 
 import CommentList from '../../CommentList/CommentList'
 import { useNavigate, useParams } from 'react-router-dom'
@@ -7,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import FeedbackList from '../../FeedbackList/FeebackList'
 import Chat from '../../../Chat/Chat'
 import { deleteTaskThunk } from '../../../../redux/actions/tasksAc'
+import { upTaskThunk } from '../../../../redux/actions/tasksAc';
 
 function CurrentTask() {
   const { id } = useParams()
@@ -14,16 +16,24 @@ function CurrentTask() {
   const navigate = useNavigate()
   const [status, setStatus] = useState(1)
   const user = useSelector((state) => state.user)
-  const task = useSelector(state => state.tasks.find((el) => el.id === +id))
+  const tasks = useSelector(state => state.tasks)
+  const task = tasks.find((el) => el.id === +id);
+  console.log('TASK', task)
+
   useEffect(() => {
     if (task) {
       setStatus(task.status)
     }
-  }, [task])
+  }, [tasks])
 
   const clickHandler = () => {
     dispatch(deleteTaskThunk(id))
     navigate('/')
+  }
+
+  const handleMatch = () => {
+    console.log('HELLO')
+    dispatch(upTaskThunk(id))
   }
 
   return (
@@ -31,6 +41,7 @@ function CurrentTask() {
       {task &&
 
         (<div className={style.currentContainer}>
+          
           <div>
             <div className={style.currentRole}>Картинка</div>
             <div className={style.currentOwnerInfoCard}>
@@ -72,25 +83,26 @@ function CurrentTask() {
 
                 <div className={style.currentTaskLevels}>
 
-                  <div className={status === 1 ? style.currentTaskLevelDone : style.currentTaskLevel}>1. Лот</div>
+                  <div className={status === 1 ? style.currentTaskLevelDone : style.currentTaskLevel}>1. Лот открыт</div>
                 </div>
                 <div className={style.currentTaskLevels}>
 
-                  <div className={status === 2 ? style.currentTaskLevelDone : style.currentTaskLevel}>2. Ставки</div>
+                  <div className={status === 2 ? style.currentTaskLevelDone : style.currentTaskLevel}>2. Закрытие сделки</div>
                 </div>
                 <div className={style.currentTaskLevels}>
 
-                  <div className={status === 2 ? style.currentTaskLevelDone : style.currentTaskLevel}>3. Закрытие</div>
+                  <div className={status === 3 ? style.currentTaskLevelDone : style.currentTaskLevel}>3. Итоги торгов</div>
                 </div>
-                <div className={style.currentTaskLevels}>
 
-                  <div className={status === 3 ? style.currentTaskLevelDone : style.currentTaskLevel}>4. Результаты</div>
-                </div>
 
               </div>
+              <button onClick={handleMatch} className={style.btn}>Продвинуть таску</button>
               <br />
               {status === 1 && (
-                <CommentList />
+                <>
+                  <CommentList />
+                  <Count deadline = {task.deadline} id = {id}/>
+                </>
               )}
               {status === 2 && (
                 <Chat task={task} />

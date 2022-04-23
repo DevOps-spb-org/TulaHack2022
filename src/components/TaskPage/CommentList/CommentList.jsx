@@ -15,6 +15,7 @@ export default function CommentList() {
   useEffect(() => {
     setActualComments(comments.filter(el => el.task_id === task_id).reverse())
   }, [comments])
+  console.log(actualComments)
   return (
 
     <>

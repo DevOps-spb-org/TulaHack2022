@@ -39,9 +39,9 @@ function App() {
     dispatch(getAllUsers())
   }, [])
 
-  // useEffect(() => {
-  //   dispatch(allComments())
-  // }, [])
+  useEffect(() => {
+    dispatch(allComments())
+  }, [])
 
   // useEffect(() => {
   //   dispatch(allFeedbacks())

@@ -21,7 +21,7 @@ const TaskUser = () => {
 
   return (
     <div>
-      <h3 className={style.container}>Мои задачи: </h3>
+      <h3 className={style.container}>Мои лоты: </h3>
       {tasks.length > 0 && (
         <div className={style.taskListContainer}>
           {arr.map((el) => (

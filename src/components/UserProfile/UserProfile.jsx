@@ -37,7 +37,7 @@ const UserProfile = () => {
               <div className={style.separator}></div>
               <div className={style.container}>
                 <div className={style.role}>Роль</div>
-                <div className={style.role1}>{user.role === 3 ? 'Исполнитель' : 'Заказчик'}</div>
+                <div className={style.role1}>{user.role === 3 ? 'Покупатель' : 'Продавец'}</div>
               </div>
               <div className={style.separator}></div>
               <div className={style.buttonContainer}>
@@ -46,7 +46,7 @@ const UserProfile = () => {
                   className={style.button}
                   type="submit"
                 >
-                  Создать задачу
+                  Создать лот
                 </button>
               </div>
               <div className={style.buttonContainer}>
