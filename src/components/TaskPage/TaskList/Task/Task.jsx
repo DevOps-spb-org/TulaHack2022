@@ -3,32 +3,49 @@ import style from './style.module.css'
 import { Link, useParams } from 'react-router-dom'
 
 
-function Task({ id, title, category, description, deadlinecreatedAt }) {
+function Task({ id, title, category, description, image, deadline, createdAt }) {
 
 
   return (
-    <div className={style.taskContainer}>
-      <div className={style.taskHeader}>{title}</div>
-      <div className={style.taskAbout}>
-      </div>
-      <Link to={`/tasks/${id}`}>
-        <div className={style.taskDescription}>
-          {description}
-        </div>
+    <div className={style.cardLots}>
 
-      </Link>
-      <div className={style.taskSeparator}></div>
-      <div className={style.taskTagContainer}>
-        <div className={style.taskCategory}>{category}</div>
-        <div className={style.taskTag}>
-          <div className={style.tasksvg}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-tags" viewBox="0 0 16 16">
-            <path d="M3 2v4.586l7 7L14.586 9l-7-7H3zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2z"/>
-            <path d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1v5.086z"/>
-          </svg>
-          </div>
-          </div>
+
+      <img src={image} alt=''/>
+      <h2>{title}</h2>
+      <h3>прямой аукцион&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Алексей М.</h3>
+      <p>{description}</p>
+
+      <div>
+        <p>Срок торгов:&nbsp;&nbsp;
+          <span className={style.spanAdd}>19/02/2022 18:00</span>
+        </p>
+        <p>Последняя ставка:&nbsp;&nbsp;
+          <span className={style.spanAdd}>2 000 $</span>
+        </p>
       </div>
+
+      <div className={style.btnGroup2}>
+      <Link className={style.linkOff} to={`/tasks/${id}`}>
+        <button type="button" className={style.join2}>
+            <span className={style.btnText}>Сделать ставку</span>
+        </button>
+      </Link>
+
+        <button type="button" className={style.enter2}>
+          <span className={style.btnIcon}>
+            <svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.0469 3.51541C27.9812 -7.90046 36.9184 16.2607 14.0469 23.5C-8.82462 16.2607 0.112541 -7.90046 14.0469 3.51541Z" fill="url(#paint0_linear_37_1731)"/>
+              <defs>
+              <linearGradient id="paint0_linear_37_1731" x1="2.67987" y1="1.62847" x2="21.1021" y2="22.5803" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#58DC5D"/>
+              <stop offset="1" stop-color="#04CE9B"/>
+              </linearGradient>
+              </defs>
+            </svg>
+          </span>
+        </button>
+      </div>
+
     </div>
   )
 }

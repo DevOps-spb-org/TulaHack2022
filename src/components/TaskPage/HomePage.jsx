@@ -7,7 +7,7 @@ import TaskList from './TaskList/TaskList'
 function TaskPage() {
   return (
     <div className={style.homeContainer}>
-      <FilterSector />
+      {/* <FilterSector /> */}
       <TaskList />
     </div>
   )

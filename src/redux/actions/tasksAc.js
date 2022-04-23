@@ -11,27 +11,29 @@ export const allTasks = () => (dispatch) => {
     let data = [
       {
         id: 1,
-        title: 'Lorem ipsum dolor sit amet',
+        title: 'Греческая ваза',
         category: 'Антиквариат',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula ipsum id enim tincidunt, vel egestas arcu euismod. Vestibulum ipsum massa, fringilla nec placerat vitae, eleifend at lectus.',
-        deadline: '2022-04-23 16:30:00',
+        description: 'Ваза I в до н.э., растоможена. Достал со дна политик.',
+        deadline: '2022-04-24 16:30:00',
+        image: '/img/lot1.png',
         isDone: false,
         status: 1,
-        owner: 4,
+        owner: 1,
         worker: null,
         createdAt: '2022-01-15 02:00:00',
         updatedAt: '2022-01-15 02:00:00',
         USER: {
-          name: 'Christies Auction House',
-          avatar: 'https://brandslogos.com/wp-content/uploads/thumbs/christies-logo-vector.svg',
+          name: 'Слава К.',
+          avatar: '/img/ava1.png'
         }
       },
       {
         id: 2,
-        title: 'Lorem ipsum dolor sit amet',
-        category: 'Антиквариат',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula ipsum id enim tincidunt, vel egestas arcu euismod. Vestibulum ipsum massa, fringilla nec placerat vitae, eleifend at lectus.',
-        deadline: '2022-02-14 02:00:00',
+        title: 'VW Golf VI GTI 2.0',
+        category: 'Автомобиль',
+        description: 'Культовый хотхэтч немецкой сборки на 245 л.с.',
+        deadline: '2022-04-24 16:30:00',
+        image: '/img/lot2.png',
         isDone: false,
         status: 1,
         owner: 2,
@@ -39,25 +41,44 @@ export const allTasks = () => (dispatch) => {
         createdAt: '2022-01-17 02:00:00',
         updatedAt: '2022-01-17 02:00:00',
         USER: {
-          name: 'Christies Auction House',
-          avatar: 'https://brandslogos.com/wp-content/uploads/thumbs/christies-logo-vector.svg',
+          name: 'КФХ “АгроФуд”',
+          avatar: '/img/ava2.png'
         }
       },
       {
         id: 3,
-        title: 'Lorem ipsum dolor sit amet',
+        title: 'Коллекционная монета',
         category: 'Антиквариат',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula ipsum id enim tincidunt, vel egestas arcu euismod. Vestibulum ipsum massa, fringilla nec placerat vitae, eleifend at lectus.',
-        deadline: '2022-02-14 02:00:00',
-        isDone: true,
+        description: 'Швейцарская монета 20 раппенов 2011 года.',
+        deadline: '2022-04-24 16:30:00',
+        image: '/img/lot3.png',
+        isDone: false,
         status: 3,
         owner: 5,
         worker: 7,
         createdAt: '2022-01-19 02:00:00',
         updatedAt: '2022-01-19 02:00:00',
         USER: {
-          name: 'Christies Auction House',
-          avatar: 'https://brandslogos.com/wp-content/uploads/thumbs/christies-logo-vector.svg',
+          name: 'Anonimus #0570',
+          avatar: '/img/ava3.png'
+        }
+      },
+      {
+        id: 4,
+        title: 'BitMonkey NFT',
+        category: 'Антиквариат',
+        description: 'Известный NFT-токен на холсте маслом.',
+        deadline: '2022-04-24 16:30:00',
+        image: '/img/lot4.jpeg',
+        isDone: false,
+        status: 3,
+        owner: 5,
+        worker: 7,
+        createdAt: '2022-01-19 02:00:00',
+        updatedAt: '2022-01-19 02:00:00',
+        USER: {
+          name: 'Tesla, Inc.',
+          avatar: '/img/ava4.png'
         }
       },
     ]

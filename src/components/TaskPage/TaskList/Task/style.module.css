@@ -1,96 +1,75 @@
-.taskContainer {
+
+.cardLots{
+  color: #555555;
+  border: 1px solid #E3E3E3;
+  box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.13);
+  border-radius: 24px;
+  padding: 25px;
+  width: 25rem;
   display: flex;
   flex-direction: column;
-  padding: 25px;
-  border: 1px solid black;
-  border-radius: 25px;
-  margin-bottom: 25px;
-  width: 650px;
-
+  margin-bottom: 5rem;
 }
 
-.taskDescription {
-  display: inline-block;
-  color: black;
-  text-decoration: none;
-  margin-bottom: 5px;
-}
-.taskDescription:hover {
-  color: black;
+.cardLots img{
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 20px;
 }
 
-.ownerContainer {
-  display: flex;
-}
-.taskAbout {
-  font-size: 12px;
+.cardLots h3{
+  font-size: 14px;
 }
 
-.taskAboutOwner {
-  font-size: 16px;
-  margin-left: 15px;
-  font-family: Roboto;
-  margin-bottom: 1px;
+.cardLots p{
+  margin-top: 10px;
+  font-size: 22px;
 }
 
-.ownerImg {
-  border-radius: 36px;
-  width: 20px;
-  height: 20px;
+.spanAdd{
+  color: #58DC5D;
 }
 
-.taskHeader {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 36px;
-  margin-bottom: 15px;
-  margin-top: 15px;
+.join2{
+  margin-top: 10px;
+  height: 60px;
+  width: 260px;
+  background: linear-gradient(94.97deg, #04CE9B 0%, #64E408 100%);
+  border-radius: 8px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
 }
 
-.taskDescription {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
+.enter2{
+  margin-top: 10px;
+  margin-left: 25px;
+  height: 60px;
+  width: 60px;
+  border: #555555 solid 1px;
+  background: none;
+  border-radius: 8px;
 }
 
-.taskAbout {
-  display: flex;
-  margin-bottom: 15px;
-}
-
-.taskDeadline {
-  color: #e64825;
-  margin-right: 15px;
-}
-
-.taskBorn {
-  margin-right: 15px;
-}
-
-.taskTagContainer {
+.btnGroup2{
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
 }
 
-.taskTag {
-  display: flex;
+.linkOff{
+  text-decoration:none;
+  color: inherit;
 }
 
-.tag {
-  margin-right: 15px;
-  font-style: italic;
+.linkOff:hover 
+{
+  text-decoration:none;
+  color: inherit;
 }
 
-.tasksvg {
-  margin-right: 15px;
-  color: rgb(0, 0, 0);
-}
-
-.taskCategory {
-  font-weight: 700;
+.btnText{
+  margin-left: 5px;
+  margin-right: 10px;
+  color: white;
 }

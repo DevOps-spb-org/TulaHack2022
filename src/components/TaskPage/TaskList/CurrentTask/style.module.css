@@ -1,185 +1,116 @@
 .currentContainer{
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.currentOwnerInfoCard {
-  display: flex;
-  flex-direction: row;
-  padding: 15px;
-  border: 1px solid black;
-  border-radius: 25px;
+  justify-content: space-between;
 }
 
-.currentRole {
-  margin-bottom: 15px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 23px;
-line-height: 79px;
-/* or 110% */
-
-letter-spacing: 0.5px;
-text-transform: uppercase;
+.imgLot{
+  position: relative;
+  height: 700px;
+  width: 700px;
+  border-radius: 20px;
+  padding: 140px;
+  box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.13);
 }
 
-.currentOwnerImg {
-  height: 60px;
+.currentTaskHeader{
+  font-size: 50px;
+}
+
+.currentTaskContainer{
+  width: 900px;
+}
+
+.currentTaskContainer h3{
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.ava{
   width: 60px;
-  border-radius: 30px;
 }
 
-.currentOwnerInfo {
-  display: flex;
-  flex-direction: column;
-margin-left: 15px;
+.avaSpan{
+  margin-left: 10px;
 }
 
-.currentTaskContainer {
-  display: flex;
-  flex-direction: column;
-  width: 650px;
-  border: 1px solid black;
-  border-radius: 25px;
-  padding: 15px;
+.devide{
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
-.currentRole {
-  margin-bottom: 25px;
+.devide p{
+  font-size: 24px;
 }
 
-.currentTaskInfoContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.devide1{
+  border-bottom: 2px black solid;
+  width: 100px;
+  position:absolute;
 }
 
-.currentTaskHeader {
-  margin-bottom: 15px;
+.devide2{
+  border-bottom: 2px #555555 solid;
+  opacity: 0.5;
 }
 
-.currentTaskDeadline {
-  padding-right: 10px;
+.count{
+  color: #58DC5D;
 }
 
-.currentTaskMainHeader {
-  margin-bottom: 15px;
+.description{
+  font-size: 24px;
 }
 
-.currentTaskTime {
-  padding-right: 10px;
+.countBefore{
+  font-size: 20px;
 }
 
-.currentTaskCategoryContainer {
-  display: flex;
-  flex-direction: row;
-}
-
-.currentTaskSeparator {
-  height: 1px;
-  background-color: black;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.currentTaskStatusContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.currentTaskStatusLevels {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.currentTaskStatus {
-  display: flex;
-  flex-direction: row;
-}
-
-.currentTaskCategoryContainer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  
-}
-
-.currentTaskCategory {
-  font-size: 13px;
-  font-weight: 600;
-
-}
-.currentTaskTag{
-  font-size: 13px;
-  display: flex;
-  
-}
-
-
-.currentTaskLevels {
-  display: flex;
-  justify-content: row;
+.btnText{
+  margin-left: 5px;
   margin-right: 10px;
+  color: white;
 }
 
-.currentTaskLevel {
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 15px;
-  border-right: 20px solid black transparent;
-  background-color: #b1b1b1;
+.join2{
+  margin-left: 30px;
+  height: 60px;
+  width: 250px;
+  background: linear-gradient(94.97deg, #04CE9B 0%, #64E408 100%);
+  border-radius: 8px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
 }
 
-.currentTaskLevel::after {
-  border-left: 1px solid black;
+.search{
+  border-radius: 8px;
+  width: 250px;
+  height: 60px;
+  border: #64E408 solid 1px;
 }
 
-.tag {
-  margin-left: 15px;
-  font-style: italic;
+.search1{
+  margin-left: 20px;
 }
 
-.currentTaskLevelDone {
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 15px;
-  background-color:#99FF91; ;
+
+.search2{
+  position:relative;
+  width: 80px;
+  margin-left: 80px;
+  margin-top: 17px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style:dashed;
+  border-color: #64E408;
+  text-align: center;
+  outline:none;
 }
 
-.btn {
-  background: #99FF91;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
-  border-radius: 100px;
-  width: 150px;
-  }
-  .btn:hover {
-    background: #ffffff;
-  }
-
-  .currentTaskDeadline {
-    color: rgb(226, 63, 63);
-    font-size: 11px;
-  }
-
-  .currentTaskHeader {
-    font-size: 20px;
-  }
-  .currentTaskMainHeader {
-    font-size: 18px;
-  }
-.currentTaskTime {
-  font-size: 11px;
-}
-.currentTaskResponse {
-  font-size: 11px;
-}
-
-.tasksvg {
-  margin-right: 5px;
-  color: rgb(0, 0, 0);
+.btnGroup{
+  margin-top: 50px;
+  display: flex;
+  
 }

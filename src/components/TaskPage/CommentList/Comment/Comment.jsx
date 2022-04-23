@@ -17,7 +17,7 @@ function Comment( { comment, user_id, task_id }) {
 
   return (
     <>
-      {user && task && (
+      {task && (
         <div className={style.mainContainer}>
           <div className={style.userContainer}>
             <img className={style.img} src={user.avatar}></img>

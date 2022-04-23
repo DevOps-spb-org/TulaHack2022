@@ -15,7 +15,6 @@ export default function CommentList() {
   useEffect(() => {
     setActualComments(comments.filter(el => el.task_id === task_id).reverse())
   }, [comments])
-  console.log(actualComments)
   return (
 
     <>
@@ -27,10 +26,17 @@ export default function CommentList() {
             )
           }
           <br/>
-          {actualComments.map((el) => <Comment key={el.id} {...el} />)}
         </div>
       )
     }
+    {actualComments !== [] && (
+      <div>
+        {actualComments.map((el) => <Comment key={el.id} {...el} />)}
+      </div>
+      )
+    }
+    
+    
     </>
   )
 }
