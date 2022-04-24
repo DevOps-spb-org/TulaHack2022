@@ -13,14 +13,14 @@ import { CustomLink } from './CustomLink/CustomLink'
       role: 2,
     },
     {
-      path: '/tasks',
-      label: 'Лоты',
+      path: '/workers',
+      label: 'Магазины',
       isUser: true,
       role: 3,
     },
     {
-      path: '/workers',
-      label: 'Магазины',
+      path: '/tasks',
+      label: 'Лоты',
       isUser: true,
       role: 3,
     },

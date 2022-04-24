@@ -11,36 +11,10 @@ function CurrentWorker() {
     .find(el => el.id === +id)
 
   return (
-    <div className={style.currentWorkerContainer}>
-      <div className={style.currentWorkerInfoContainer}>
-        <div className={style.currentWorkerAvatar}>
-          <img className={style.avatar} src={user.avatar} alt="" />
-        </div>
-        <div className={style.currentWorkerName}>
-          <div className={style.aboutName}>Имя: </div>
-          <div className={style.name}>{user.name}</div>
-        </div>
-        <div className={style.currentWorkerEmail}>
-          <div className={style.aboutEmail}>Адрес электронной почты</div>
-          <div className={style.email}>{user.email}</div>
-        </div>
-        <div className={style.aboutMe}>
-          <div className={style.aboutHeader}>Расскажите о себе</div>
-          <div className={style.about}>{user.resume}</div>
-        </div>
-        <div className={style.aboutRole}>
-          <div className={style.roleHead}>Роль</div>
-          <div className={style.role}>{user.role === 2 ? 'Заказчик' : 'Исполнитель'}</div>
-        </div>
-      </div>
-      <div className={style.currentTaskContainer}>
-        <h2>Открытые лоты:</h2>
-        {
-          tasks.map((el) => {
-            return <div key={el.id} className={style.worker}></div>
-          })
-        }
-      </div>
+    <div>
+      <img className={style.img} src='/img/worker.png'/>
+      <img className={style.img} src='/img/товары без ф.png'/>
+      
     </div>
   )
 }

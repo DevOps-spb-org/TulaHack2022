@@ -45,9 +45,9 @@ export const addFeedbackThunk = (feedback , task_id, currentUser, stars) => asyn
   // const userFromBack = await axios.post('http://localhost:3001/feedback', {feedback, task_id, currentUser, stars})
   let data = {
     id: 3,
-    user_id: 1,
-    task_id: 1,
-    feedback: 'Хороший лот!',
+    user_id: 5,
+    task_id: task_id,
+    feedback: feedback,
     data: '12.24.2022'
   }
   const response = data

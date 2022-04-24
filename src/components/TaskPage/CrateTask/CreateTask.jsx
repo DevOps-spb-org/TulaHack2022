@@ -43,12 +43,10 @@ function CreateTask () {
         <label className={style.label}>КАТЕГОРИЯ</label>
         <select className={style.input} value={task.category} name='category' onChange={inputChange}>
           <option disabled value='Выбирите категорию'>Выбирите категорию</option>
-          <option selected value="Веб-сайты">Веб-сайты</option>
-          <option value="Мобильные приложения">Мобильные приложения</option>
-          <option value="Виртуальная реальность">Виртуальная реальность</option>
-          <option value="Игры">Игры</option>
-          <option value="Чат-боты">Чат-боты</option>
-          <option value="Робототехника">Робототехника!</option>
+          <option selected value="Антиквариат">Антиквариат</option>
+          <option value="Искусство">Искусство</option>
+          <option value="Предметы роскоши">Предметы роскоши</option>
+          <option value="Техника">Техника</option>
           <option value="Другое">Другое!</option>
         </select>
         <label className={style.label}>СРОКИ</label>
@@ -59,18 +57,10 @@ function CreateTask () {
           value={task.deadline}
           onChange={inputChange}
         />
-        <label className={style.label}>ТЭГИ</label>
-        <input 
-          className={style.input}
-          type='text'
-          name='tags'
-          value={task.tags}
-          onChange={inputChange}
-        />
-        <div id="emailHelp" class="form-text">указывайте тэги через запятую, не более 3-х</div>
         <br/>
         <button className={style.btn} type="submit">ОПУБЛИКОВАТЬ</button>
       </form>
+      <img src='/img/how1.png'></img>
     </div>
   )
 }

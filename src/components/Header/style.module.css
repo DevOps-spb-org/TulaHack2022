@@ -92,3 +92,18 @@
 .btnIcon{
   margin-right: 5px;
 }
+
+.enter4{
+  margin-top: 30px;
+  height: 60px;
+  width: 220px;
+  border: solid 1px #64E408;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.btnText4{
+  margin-left: 5px;
+  margin-right: 10px;
+  color: #64E408;
+}

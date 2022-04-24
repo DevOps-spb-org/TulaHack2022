@@ -60,6 +60,7 @@ function Greet() {
                   <img src='/img/ava1.png' alt=''/>
                   <h3>Слава К.</h3>
                   <p>Основные лоты на аукционах – nft изображения, звуковые дорожки для исполнителей</p>
+                  <Link className={style.textLink} to='/workers/1'>
                   <div>Перейти&nbsp;&nbsp;
                     <span>
                       <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,6 +68,7 @@ function Greet() {
                       </svg>
                     </span>
                   </div>
+                  </Link>
               </div>
 
               <div className={style.cardSellers}>
@@ -106,6 +108,20 @@ function Greet() {
                       </svg>
                     </span>
                   </div>
+              </div>
+            </div>
+
+            <div className={style.howContainer}>
+              <h1>Как это работает</h1>
+              <div className={style.howPic}>
+                <div className={style.howPic1}>
+                  <img src='/img/how1.png' />
+                  <h3>С чего начать</h3>
+                </div>
+                <div className={style.howPic2}>
+                  <img src='/img/how3.png' />
+                  <h3>Виды аукционов</h3>
+                </div>
               </div>
             </div>
 

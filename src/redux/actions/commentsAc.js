@@ -43,7 +43,7 @@ export const addCommentThunk = (comment, task_id) => async (dispatch) => {
   const response = {
     id: 3,
     comment: comment,
-    user_id: 1,
+    user_id: 5,
     task_id: task_id,
   }
   dispatch(addComment(response))

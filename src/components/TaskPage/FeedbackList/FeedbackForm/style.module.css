@@ -17,9 +17,10 @@
 
 textarea {
   border-radius: 5px;
-  padding: 10px;
+  padding: 20px;
   height: 150px;
   width: 1580px;
+  font-size: 20px;
   border: none;
   background-color: rgb(231, 231, 231);
   resize: none;

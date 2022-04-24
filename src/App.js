@@ -1,7 +1,7 @@
 import TaskPage from "./components/TaskPage/HomePage"
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
 import Signin from "./components/Authentication/Signin/Signin"
 import Signup from "./components/Authentication/Signup/Signup"
 import Signout from "./components/Authentication/Signout/Signout"
@@ -23,6 +23,15 @@ import { allMsg } from "./redux/actions/msgAc"
 import CurrentWorker from "./components/Workers/CurrentWorker/CurrentWorker"
 
 function App() {
+  function useScrollToTop() {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  }
+  useScrollToTop()
+  
   const dispatch = useDispatch()
   const user = useSelector((state) => state.user)
   useEffect(() => {
@@ -52,8 +61,7 @@ function App() {
   return (
     <div className={style.content}>
         <Header />
-        <Routes>
-          
+        <Routes>          
           <Route path="/" element={<Greet />} />
           <Route path="signin" element={<Signin />} />
           <Route path="/create" element={<CreateTask />} />

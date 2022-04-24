@@ -11,11 +11,11 @@ export const addUser = (formData) => async (dispatch) => {
   // const userFromBack = await axios.post('http://localhost:3001/users/signup', { formData })
   let userFromBack = {
     id: 1,
-    name: 'Анастасия Милецкая',
+    name: 'Федор Достоевский',
     resume: 'Музей Русского импрессионизма',
     email: 'impress@gmail.com',
-    role: 2,
-    avatar: '/img/ava1.png',
+    role: 3,
+    avatar: '/img/ava0.png',
   }
   const response = userFromBack.data
   dispatch(addUserAction(response))
@@ -43,11 +43,11 @@ export const signinUser = (signinForm) => async (dispatch) => {
   // const userFromBack = await axios.post('http://localhost:3001/users/signin', { signinForm })
   let userFromBack = {
     id: 1,
-    name: 'Анастасия Милецкая',
+    name: 'Федор Достоевский',
     resume: 'Музей Русского импрессионизма',
     email: 'impress@gmail.com',
     role: 3,
-    avatar: '/img/ava1.png',
+    avatar: '/img/ava0.png',
     }
   dispatch(signinUserAction(userFromBack))
 }
@@ -62,11 +62,11 @@ export const checkUser = () => async (dispatch) => {
   // const userFromBack = await axios('http://localhost:3001/users/check')
   let userFromBack = {
     id: 1,
-    name: 'Анастасия Милецкая',
+    name: 'Федор Достоевский',
     resume: 'Музей Русского импрессионизма',
     email: 'impress@gmail.com',
     role: 3,
-    avatar: '/img/ava1.png',
+    avatar: '/img/ava0.png',
   }
   dispatch(checkUserAction(userFromBack))
 }
@@ -102,10 +102,10 @@ export const editUserToServer = async (data) => {
   // }
   return {
     id: 1,
-    name: 'Анастасия Милецкая',
+    name: 'Федор Достоевский',
     resume: 'Музей Русского импрессионизма',
     email: 'impress@gmail.com',
     role: 3,
-    avatar: 'http://localhost:3001/impress.jpeg',
+    avatar: '/img/ava0.png',
   }
 }

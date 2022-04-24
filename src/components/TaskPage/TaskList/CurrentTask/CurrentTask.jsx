@@ -73,13 +73,24 @@ function CurrentTask() {
 
               <p className={style.description}>{task.description}... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing.</p>
 
-              <p className={style.countBefore}>До окончания аукциона: &nbsp;&nbsp;&nbsp;&nbsp;
-                <span className={style.count}>
-                  <Count deadline = {task.deadline} id = {id}/>
-                </span>
-              </p>
+            {task.status == 1 && (
+              <>
+                <p className={style.countBefore}>До окончания аукциона: &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className={style.count}>
+                    <Count deadline = {task.deadline} id = {id}/>
+                  </span>
+                </p>
+                <CommentForm />
+              </>
+            )}
 
-              <CommentForm />
+            {task.status == 2 && (
+              <>
+                <button type="button" className={style.join2}>
+                    <span className={style.btnText}>Аукцион завершен!</span>
+              </button>
+              </>
+            )}
 
               {/* <div className={style.btnGroup}>
               <div className={style.search}>
@@ -103,15 +114,12 @@ function CurrentTask() {
           </div>
         </div>
         <div className={style.currentContainer2}>
-          {status === 1 && (
-                  <>
+
+
                     <h1>Ставки</h1>
                     <CommentList />
-                  </>
-                )}
-                {status === 2 && (
-                  <Chat task={task} />
-                  )}
+
+
         </div>
         <div className={style.currentContainer3}>
           <h1>Комментарии</h1>

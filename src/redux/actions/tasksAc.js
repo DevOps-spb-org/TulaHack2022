@@ -2,7 +2,7 @@ import axios from 'axios'
 import { ADD_TASK, ALL_TASKS, TASK_UP, FILTER_TASK, SEARCH_TASK } from '../types/tasksTypes'
 
 export const allTasks = () => (dispatch) => {
-  // fetch('http://localhost:3001/')
+  // fetch('https://th.zerobot.ru/lots.php')
   //   .then(res => res.json())
   //   .then(data => dispatch({
   //     type: ALL_TASKS,

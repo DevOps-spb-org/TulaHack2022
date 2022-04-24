@@ -53,6 +53,17 @@ export const getAllUsers = () => (dispatch) => {
         resume: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         createdAt: '2013-10-27 02:00:00',
         updatedAt: '2013-10-27 02:00:00',
+      },
+      {
+        id: 5,
+        name: 'Федор Достоевский',
+        email: 'merch@gmail.com',
+        role: 3,
+        avatar: '/img/ava0.png',
+        password: '123',
+        resume: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        createdAt: '2013-10-27 02:00:00',
+        updatedAt: '2013-10-27 02:00:00',
       }
     ];
     dispatch({

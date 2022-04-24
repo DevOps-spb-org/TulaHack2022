@@ -86,10 +86,10 @@
 }
 
 .join2{
-  margin-left: 30px;
   height: 60px;
   width: 250px;
-  background: linear-gradient(94.97deg, #04CE9B 0%, #64E408 100%);
+  margin-top: 40px;
+  background: linear-gradient(94.97deg, #ff0505 0%, #ff6d6d 100%);
   border-radius: 8px;
   border-top-style: hidden;
   border-right-style: hidden;
