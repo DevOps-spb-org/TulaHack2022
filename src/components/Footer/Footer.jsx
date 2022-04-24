@@ -8,7 +8,8 @@ function Footer() {
 
   return (
     <>
-      <div className={style.footerSeparator}></div>
+    <img src='/img/fakeFooter.png'/>
+      {/* <div className={style.footerSeparator}></div>
       <div className={style.footer}>
         <div className={style.footerLogo}>
           <Link className={style.link} to={'/'}>Best Ipsum Bet (c)</Link>
@@ -21,7 +22,7 @@ function Footer() {
           <p></p>
           <p></p>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }

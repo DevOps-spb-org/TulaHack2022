@@ -25,6 +25,13 @@
   color: #555555;
   font-weight: bold;
   font-size: 43px;
+  text-decoration: none;
+}
+
+.logoText:hover{
+  color: inherit;
+  opacity: 50%;
+  text-decoration: none;
 }
 
 .logoSub{

@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Comment from './Comment/Comment';
 import CommentForm from './CommentForm/CommentForm'
+import style from './style.module.css'
 
 export default function CommentList() {
   const {id} = useParams()
@@ -18,7 +19,7 @@ export default function CommentList() {
   return (
 
     <>
-      {actualComments !== [] && user && (
+      {/* {actualComments !== [] && user && (
         <div>
           {
             user.role === 3 && (
@@ -28,10 +29,21 @@ export default function CommentList() {
           <br/>
         </div>
       )
-    }
+    } */}
     {actualComments !== [] && (
       <div>
-        {actualComments.map((el) => <Comment key={el.id} {...el} />)}
+        <table className={style.tableContainer}>
+        <thead>
+          <tr>
+            <th scope="col">Ставка</th>
+            <th scope="col">Дата и время</th>
+            <th scope="col">Пользователь</th>
+          </tr>
+        </thead>
+        <tbody>
+          {actualComments.map((el) => <Comment key={el.id} {...el} />)}
+        </tbody>
+        </table>
       </div>
       )
     }

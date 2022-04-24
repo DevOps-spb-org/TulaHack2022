@@ -15,7 +15,7 @@ export const addUser = (formData) => async (dispatch) => {
     resume: 'Музей Русского импрессионизма',
     email: 'impress@gmail.com',
     role: 2,
-    avatar: 'http://localhost:3001/impress.jpeg',
+    avatar: '/img/ava1.png',
   }
   const response = userFromBack.data
   dispatch(addUserAction(response))
@@ -47,8 +47,8 @@ export const signinUser = (signinForm) => async (dispatch) => {
     resume: 'Музей Русского импрессионизма',
     email: 'impress@gmail.com',
     role: 3,
-    avatar: 'http://localhost:3001/impress.jpeg',
-  }
+    avatar: '/img/ava1.png',
+    }
   dispatch(signinUserAction(userFromBack))
 }
 
@@ -66,7 +66,7 @@ export const checkUser = () => async (dispatch) => {
     resume: 'Музей Русского импрессионизма',
     email: 'impress@gmail.com',
     role: 3,
-    avatar: 'http://localhost:3001/impress.jpeg',
+    avatar: '/img/ava1.png',
   }
   dispatch(checkUserAction(userFromBack))
 }

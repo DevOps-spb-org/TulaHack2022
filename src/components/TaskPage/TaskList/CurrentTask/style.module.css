@@ -1,7 +1,20 @@
+.currentContainer0{
+  display: flex;
+  flex-direction: column;
+}
+
+.currentContainer2{
+  margin-top: 50px;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.13);
+}
+
 .currentContainer{
   display: flex;
   justify-content: space-between;
 }
+
 
 .imgLot{
   position: relative;
@@ -62,6 +75,7 @@
 }
 
 .countBefore{
+  margin-top: 20px;
   font-size: 20px;
 }
 
@@ -113,4 +127,24 @@
   margin-top: 50px;
   display: flex;
   
+}
+
+.currentContainer3{
+  margin-top: 70px;
+}
+
+.currentContainer3 h1{
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
+.enter2{
+  opacity: 30%;
+  margin-top: 10px;
+  margin-left: 25px;
+  height: 60px;
+  width: 60px;
+  border: #555555 solid 1px;
+  background: none;
+  border-radius: 8px;
 }

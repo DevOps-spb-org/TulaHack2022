@@ -3,6 +3,7 @@ import style from './style.module.css'
 
 import { useSelector } from 'react-redux'
 import Task from '../TaskPage/TaskList/Task/Task'
+import { Link } from 'react-router-dom'
 
 function Greet() {
   const tasks = useSelector(store => store.tasks)
@@ -114,7 +115,9 @@ function Greet() {
               <h1 >Популярные лоты</h1>
               <div>
               <button type="button" className={style.enter0}>
-                      <span className={style.btnText0}>Смотреть все</span>
+                      <Link className={style.btnText0} to='/tasks'>
+                        <span>Смотреть все</span>                    
+                      </Link>
                   </button>
               </div>
             </div>

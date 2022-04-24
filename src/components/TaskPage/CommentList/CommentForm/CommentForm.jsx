@@ -29,15 +29,17 @@ function CommentForm () {
 
   return (
       <form className={style.mainContainer} onSubmit={(e) => commentHandler(e)}>
-        <textarea 
-          className={style.input}
-          type='text'
-          name='comment'
-          value={comment}
-          onChange={inputChange}
-        />
-        <div id="emailHelp" className="form-text">Lorem ipsum dolor sit amet</div>
-        <button className={style.btn} type="submit">Поставить ставку</button>
+        <div className={style.btnGroup}>
+          <div className={style.search}>
+            <div>
+              <input onChange={inputChange} value={comment} className={style.search2} type="text"/>
+            </div>
+          </div>  
+
+          <button type="submit" className={style.join2}>
+                <span className={style.btnText}>Предложить цену</span>
+          </button>
+        </div>
       </form>
   )
 }

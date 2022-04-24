@@ -38,18 +38,23 @@ function FeedbackForm () {
   }
 
   return (
-      <form className={style.mainContainer} onSubmit={(e) => feedbackHandler(e)}>
-        <input 
+    <div className={style.mainContainer} >
+      <div className={style.userContainer}>
+      <img className={style.avatar} src={user.avatar}></img>
+      <form onSubmit={(e) => feedbackHandler(e)}>
+        <textarea 
           className={style.input}
+          placeholder='Введите текст'
           type='text'
           name='feedback'
           value={feedback}
           onChange={inputChange}
         />
-        <div id="emailHelp" className="form-text">оставьте свой отзыв по итогам работы на заданием</div>
         <div className={style.containerbutton}>
-          <button className={style.btn} type="submit">ОСТАВИТЬ ОТЗЫВ</button>
-          <div className={style.starRating}>
+        <button type="submit" className={style.join2}>
+                  <span className={style.btnText}>Отправить</span>
+        </button>
+          {/* <div className={style.starRating}>
             <input onChange={inputChange2} type="radio" name="stars" id="star-a" value="5"/>
             <label for="star-a"></label>
             <input onChange={inputChange2} type="radio" name="stars" id="star-b" value="4"/>
@@ -60,9 +65,11 @@ function FeedbackForm () {
             <label for="star-d"></label>
             <input onChange={inputChange2} type="radio" name="stars" id="star-e" value="1"/>
             <label for="star-e"></label>
-          </div>
+          </div> */}
         </div>
       </form>
+      </div>
+    </div>
   )
 }
 

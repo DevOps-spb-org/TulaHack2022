@@ -18,15 +18,11 @@ function Comment( { comment, user_id, task_id }) {
   return (
     <>
       {task && (
-        <div className={style.mainContainer}>
-          <div className={style.userContainer}>
-            <img className={style.img} src={user.avatar}></img>
-            <div>{ user.name } / ставка:</div>
-          </div>
-          <div>
-            {comment}
-          </div>
-        </div>
+         <tr className={style.tableContainer}>
+          <td>{comment} $</td>
+          <td>{task.deadline}</td>
+          <td>{user.name}</td>
+       </tr>
       )}
     </>
   )

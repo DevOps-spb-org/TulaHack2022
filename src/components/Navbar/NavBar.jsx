@@ -24,12 +24,12 @@ import { CustomLink } from './CustomLink/CustomLink'
       isUser: true,
       role: 3,
     },
-    {
-      path: '/profile',
-      label: 'Личный кабинет',
-      isUser: true,
-      role: 3,
-    },
+    // {
+    //   path: '/profile',
+    //   label: 'Личный кабинет',
+    //   isUser: true,
+    //   role: 3,
+    // },
     {
       path: '/tasks',
       label: 'аукционы',
@@ -85,11 +85,11 @@ function NavBar() {
             : ''
         )}
 
-        {user && (
+        {/* {user && (
           <button onClick={signOut} className={style.link}>
             Выход
           </button>
-        )}
+        )} */}
       </div>
     </>
   )

@@ -25,9 +25,9 @@ import CurrentWorker from "./components/Workers/CurrentWorker/CurrentWorker"
 function App() {
   const dispatch = useDispatch()
   const user = useSelector((state) => state.user)
-  // useEffect(() => {
-  //   dispatch(checkUser())
-  // }, [])
+  useEffect(() => {
+    dispatch(checkUser())
+  }, [])
 
   useEffect(() => {
     dispatch(allTasks())
@@ -41,9 +41,9 @@ function App() {
     dispatch(allComments())
   }, [])
 
-  // useEffect(() => {
-  //   dispatch(allFeedbacks())
-  // }, [])
+  useEffect(() => {
+    dispatch(allFeedbacks())
+  }, [])
 
   // useEffect(() => {
   //   dispatch(allMsg())
@@ -53,6 +53,7 @@ function App() {
     <div className={style.content}>
         <Header />
         <Routes>
+          
           <Route path="/" element={<Greet />} />
           <Route path="signin" element={<Signin />} />
           <Route path="/create" element={<CreateTask />} />

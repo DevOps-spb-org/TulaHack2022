@@ -23,6 +23,13 @@
 .btnText0{
   font-size: 20px;
   color: #58DC5D;
+  text-decoration: none;
+}
+
+.btnText0:hover{
+  color: inherit;
+  opacity: 50%;
+  text-decoration: none;
 }
 
 .slider{

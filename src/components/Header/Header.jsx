@@ -8,10 +8,10 @@ import style from './style.module.css'
 function Header() {
   return (
     <div className={style.headerContainer}>
-      <div className={style.logoGroup}>
+      <div  className={style.logoGroup}>
         <img className={style.logo1} src='/img/logo.png' alt=''></img>
         <div className={style.logo2}>
-          <h1 className={style.logoText}>ИНДУСТРИЯ</h1>
+          <Link to="/" className={style.logoText}>ИНДУСТРИЯ</Link>
           <h3 className={style.logoSub}>пространство для выгодных сделок</h3>
         </div>
       </div>
